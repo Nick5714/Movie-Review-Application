@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication; // contains 'Run' which is re
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+
 public class MoviesApplication {
 
 	public static void main(String[] args) {
