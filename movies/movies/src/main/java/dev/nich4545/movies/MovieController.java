@@ -26,9 +26,9 @@ public class MovieController {
     }
 
     // Uses the PathVariable id as the mapping
-    // i.e. http://localhost:8080/api/v1/movies/<unique_movie_id>
-    @GetMapping("/{id}")
-    public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable ObjectId id){
-        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(id), HttpStatus.OK);
+    // i.e. http://localhost:8080/api/v1/movies/<imdbId>
+    @GetMapping("/{imdbId}")
+    public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable String imdbId){
+        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(imdbId), HttpStatus.OK);
     }
 }

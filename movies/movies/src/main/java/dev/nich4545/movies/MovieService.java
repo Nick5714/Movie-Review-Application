@@ -17,7 +17,7 @@ public class MovieService {
     }
 
     // Using "Optional" indicates that if a type Movie isnt found null is an ok return type
-    public Optional<Movie> singleMovie(ObjectId id){
-        return movieRepository.findById(id);
+    public Optional<Movie> singleMovie(String imdbId){
+        return movieRepository.findMovieByImdbId(imdbId);
     }
 }
